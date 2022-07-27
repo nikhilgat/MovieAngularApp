@@ -2,9 +2,9 @@
   {
     pointer-events: cursor;
     position: relative;
-    top: 4px;
+    top: -2px;
   }
   .matbtn
   {
-    padding: 10px;
+    padding: 0px;
   }
