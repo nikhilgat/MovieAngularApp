@@ -10,19 +10,23 @@
   .card
   {
     width: 400px;
-    height: 300px;
+    height: 400px;
     position: relative;
     left: 35%;
-    top: 20%;
+    top: 15%;
     background-color: black;
   }
 
-  .example-container .mat-form-field + .mat-form-field 
+  .emailform
   {
-    margin-left: 8px;
+    margin-left: 5px;
   }
 
   .logincard
   {
     text-align: center;
+  }
+  .width
+  {
+    
   }

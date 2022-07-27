@@ -14,6 +14,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { NavbarComponent } from './Components/navbar/navbar.component';
 import {MatInputModule} from '@angular/material/input';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { HomeComponent } from './Components/home/home.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     LoginComponent,
     RegisterComponent,
     NavbarComponent,
+    HomeComponent,
 
   ],
   imports: [
