@@ -1,4 +1,10 @@
 .logo
   {
     pointer-events: cursor;
+    position: relative;
+    top: 4px;
+  }
+  .matbtn
+  {
+    padding: 10px;
   }

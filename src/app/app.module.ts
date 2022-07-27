@@ -13,6 +13,9 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { NavbarComponent } from './Components/navbar/navbar.component';
+import {MatInputModule} from '@angular/material/input';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -31,6 +34,10 @@ import { NavbarComponent } from './Components/navbar/navbar.component';
     MatButtonModule,
     MatCardModule,
     MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
