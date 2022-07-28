@@ -24,7 +24,6 @@ import { HomeComponent } from './Components/home/home.component';
     RegisterComponent,
     NavbarComponent,
     HomeComponent,
-
   ],
   imports: [
     BrowserModule,
