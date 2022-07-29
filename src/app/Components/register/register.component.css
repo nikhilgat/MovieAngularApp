@@ -1,0 +1,13 @@
+
+  .card
+  {
+    margin: 0%;
+    width: 400px;
+    height: 450px;
+    position: relative;
+    left: 35%;
+    top: 85px;
+
+    background-color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }

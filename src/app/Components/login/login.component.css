@@ -2,10 +2,32 @@
   .card
   {
     width: 400px;
-    height: 400px;
+    height: 450px;
     position: relative;
     left: 35%;
-    top: 15%;
+    top: 85px;
     background-color: black;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  .icong
+  {
+    margin: 2%;
+    position: relative;
+    right: 30%;
+    
+  }
+  .iconf
+  {
+    margin: 2%;
+    position: relative;
+    left: 60%;
+  }
+  .line
+  {
+    width: 360px;
+    height: 1px;
+    position: relative;
+    left: 500px;
+    top: -28px;
+    background-color: aliceblue;
   }
