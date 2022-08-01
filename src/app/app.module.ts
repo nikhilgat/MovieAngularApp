@@ -15,6 +15,7 @@ import { NavbarComponent } from './Components/navbar/navbar.component';
 import {MatInputModule} from '@angular/material/input';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HomeComponent } from './Components/home/home.component';
+import { CatalogueComponent } from './Components/catalogue/catalogue.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { HomeComponent } from './Components/home/home.component';
     RegisterComponent,
     NavbarComponent,
     HomeComponent,
+    CatalogueComponent,
   ],
   imports: [
     BrowserModule,
