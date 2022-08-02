@@ -1,0 +1,9 @@
+.testcard
+{
+    max-width:fit-content;
+    display:inline-flex;
+}
+.card
+{
+    margin: 2%;
+}

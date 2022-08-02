@@ -14,3 +14,49 @@
     height: 350px;
     size: 20%;
 }
+.cards
+{
+  text-align: center;
+  width: 20%;
+  display: inline-block;
+  background-color: aliceblue;
+  border-radius: 10px;
+  margin: 32px;
+
+}
+.footcard
+{
+  margin:0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+.footer
+{
+  padding: 40px 0;
+  background-color: rgb(50, 50, 50);
+}
+.icons
+{
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.icons a{
+  display: inline-block;
+  padding-top: 30px;
+  margin: 0px;
+  width: 200px;
+}
+.list
+{
+  text-align: center;  
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 500;
+  margin: 30px;
+  font-style: normal;
+}
+.image
+{
+  max-width: 100px;
+  max-height: 50px;
+}
