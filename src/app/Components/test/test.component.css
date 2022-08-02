@@ -1,9 +1,45 @@
 .testcard
 {
-    max-width:fit-content;
-    display:inline-flex;
+    text-align: center;
+    background-color:rgb(85, 85, 85);
 }
+
 .card
 {
+    background-color:black;
+    max-width:20%;
+    border-radius: 10px;
+    text-align: center;
+    display:inline-block;
     margin: 2%;
 }
+.footcard
+{
+  margin:0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+.footer
+{
+  padding: 40px 0;
+  background-color: rgb(50, 50, 50);
+}
+.icons
+{
+  text-align: center;
+  padding-bottom: 50px;
+}
+.list
+{
+  text-align: center;  
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 500;
+  margin: 30px;
+  font-style: normal;
+}
+.icons a{
+    display: inline-block;
+    padding-top: 30px;
+    margin: 0px;
+    width: 200px;
+  }
