@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500&family=Nunito:wght@300&display=swap');
-
+body{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	font-family: 'Jost', sans-serif;
+    background: linear-gradient(to bottom, #212121, #4fb783, #212121);}
 .bkghome
 {
     margin: auto;
@@ -8,15 +16,15 @@
 .heading
 {
     font-family: 'Nunito', sans-serif;
-    font-size: 50px;
+    font-size: 60px;
     position: relative;
-    top: 35%;
+    top: -15%;
+    left: 4%;
 }
 .btn
 {
 position: relative;
-left: 45%;
-top: 300px;
+right: 420%;
 }
 .cards
 {

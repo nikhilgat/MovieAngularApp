@@ -1,32 +1,34 @@
+body{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	font-family: 'Jost', sans-serif;
+    background: linear-gradient(to bottom, #212121, #4fb783, #212121);}
+.testcard
+{
+    text-align: center;
+    background: linear-gradient(to bottom, #212121, #4fb783, #212121);
+
+}
+
 .card
 {
-  width: 300px;
-  height: 400px;
-  position: relative;
-  left: 5%;
-  top: 85px;
-  background-color: black;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-.img
-{
-    width: 250px;
-    height: 350px;
-    size: 20%;
-}
-.cards
-{
-  text-align: center;
-  width: 20%;
-  height: 300px;
-  display: inline-block;
-  background-color: aliceblue;
-  border-radius: 10px;
-  margin: 32px;
+    max-height: 500px;
+    background-color:#212121;
+    max-width:20%;
+    border-radius: 10px;
+    text-align: center;
+    display:inline-block;
+    margin: 2%;
+    box-shadow: 5px 20px 50px #000;
 
 }
 .footcard
 {
+  max-height: 100px;
   margin:0%;
   padding: 0%;
   box-sizing: border-box;
@@ -34,30 +36,36 @@
 .footer
 {
   padding: 40px 0;
-  background-color: rgb(50, 50, 50);
+  background-color:#212121;
 }
 .icons
 {
   text-align: center;
   padding-bottom: 50px;
 }
-
-.icons a{
-  display: inline-block;
-  padding-top: 30px;
-  margin: 0px;
-  width: 200px;
-}
 .list
 {
+  color: rgb(255, 255, 255);
   text-align: center;  
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-weight: 500;
-  margin: 30px;
-  font-style: normal;
+  margin: 0px;
+  font-style:oblique;
+  text-decoration: none;
+  padding-left:30px;
+  position: relative;
+  right: 21px;
 }
-.image
-{
-  max-width: 100px;
-  max-height: 50px;
-}
+.icons a{
+  color: rgb(255, 255, 255);
+    display: inline-block;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin: 0px;
+    width: 200px;
+  }
+
+  button:hover{
+    background: #000000;
+    transition: .3s ease-in;
+
+  } 
