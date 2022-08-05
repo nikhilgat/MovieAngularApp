@@ -7,18 +7,16 @@
 </head>
 <body>
 	<div class="main">  	
-		<input type="checkbox" id="chk" aria-hidden="true">
-
+		<input type="checkbox" id="chk">
 			<div class="signup">
 				<form>
 					<label for="chk" aria-hidden="true">Sign up</label>
-					<input type="text" name="txt" placeholder="User name" required="">
-					<input type="email" name="email" placeholder="Email" required="">
-					<input type="password" name="pswd" placeholder="Password" required="">
-					<button>Sign up</button>
+					<input type="text" [(ngModel)]="editpost.name" placeholder="User name" >
+					<input type="email" [(ngModel)]="editpost.email" placeholder="Email" >
+					<input type="password" [(ngModel)]="editpost.password" placeholder="Password" >
+					<button (click)="uploadPost()">Sign up</button>
 				</form>
 			</div>
-
 			<div class="login">
 				<form>
 					<label for="chk" aria-hidden="true">Login</label>

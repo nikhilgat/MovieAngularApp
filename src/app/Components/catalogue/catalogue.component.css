@@ -6,7 +6,7 @@ body{
 	align-items: center;
 	min-height: 100vh;
 	font-family: 'Jost', sans-serif;
-    background: linear-gradient(to bottom, #212121, #4fb783, #212121);}
+  background: linear-gradient(to bottom, #212121, #4fb783, #212121);}
 .testcard
 {
     text-align: center;
@@ -16,7 +16,8 @@ body{
 
 .card
 {
-    max-height: 500px;
+    min-height: 450px;
+    max-height: 450px;
     background-color:#212121;
     max-width:20%;
     border-radius: 10px;
@@ -26,6 +27,15 @@ body{
     box-shadow: 5px 20px 50px #000;
 
 }
+.imgs
+{
+  position: relative;
+  left: 13px;
+  max-width: 260px;
+  border-radius: 10px;
+
+}
+
 .footcard
 {
   max-height: 100px;
@@ -65,7 +75,21 @@ body{
   }
 
   button:hover{
-    background: #000000;
+    background: #4fb783;
     transition: .3s ease-in;
 
   } 
+
+.description
+{
+  min-height: 130px;
+  max-height: 130px;
+}
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.4);
+  z-index: 3;
+  border-color:  #4fb783 ! important;
+  transition: .3s ease-in-out;
+
+  }

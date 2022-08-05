@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'login',
@@ -7,18 +9,37 @@ import {FormControl, Validators} from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  hide = true;
-  email = new FormControl('', [Validators.required, Validators.email]);
-  getErrorMessage() {
-    if (this.email.hasError('required')) {
-      return 'You must enter a value';
-    }
-
-    return this.email.hasError('email') ? 'Not a valid email' : '';
+  constructor(private http: HttpClient) {
+    this.loadPosts();
   }
-  constructor() { }
+  ngOnInit(): void {}
+  
+  posts: any[] = [];
 
-  ngOnInit(): void {
+ editpost:edit={id:0 ,name:"",email:"",password:""}
+
+  loadPosts() {
+    this.http.get('http://localhost:8080/get').subscribe((posts: any) => {
+      this.posts = posts;
+    });
   }
-
+  uploadPost() {
+    this.http.put('http://localhost:8080/put', this.editpost).subscribe(
+      (res) => {
+        alert('Registered Successfully');
+        location.reload;
+        console.log(this.editpost);
+      },
+      (err) => {
+        alert('Error has occured please enter valid details');
+        location.reload;
+      }
+    );
+  }
+}
+export interface edit{
+  id:number
+  name:string
+  email:string
+  password:string
 }

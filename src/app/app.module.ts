@@ -17,7 +17,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HomeComponent } from './Components/home/home.component';
 import { CatalogueComponent } from './Components/catalogue/catalogue.component';
 import { TestComponent } from './Components/test/test.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -41,7 +41,8 @@ import { TestComponent } from './Components/test/test.component';
     MatFormFieldModule,
     MatInputModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
 
   ],
   providers: [],
