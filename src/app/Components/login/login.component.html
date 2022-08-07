@@ -5,26 +5,28 @@
 	<link rel="stylesheet" type="text/css" href="login.component.css">
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
 </head>
-<body>
-	<div class="main">  	
-		<input type="checkbox" id="chk">
-			<div class="signup">
-				<form>
-					<label for="chk" aria-hidden="true">Sign up</label>
-					<input type="text" [(ngModel)]="editpost.name" placeholder="User name" >
-					<input type="email" [(ngModel)]="editpost.email" placeholder="Email" >
-					<input type="password" [(ngModel)]="editpost.password" placeholder="Password" >
-					<button (click)="uploadPost()">Sign up</button>
-				</form>
-			</div>
-			<div class="login">
-				<form>
-					<label for="chk" aria-hidden="true">Login</label>
-					<input type="email" name="email" placeholder="Email" required="">
-					<input type="password" name="pswd" placeholder="Password" required="">
-					<button>Login</button>
-				</form>
-			</div>
-	</div>
-</body>
+	<body>
+		<div class="main">  	
+			<input type="checkbox" id="chk">
+				<div class="signup">
+					<div>
+						<label for="chk" aria-hidden="true">Sign up</label>
+						<input type="text" [(ngModel)]="editUser.name" placeholder="User name" >
+						<input type="email" [(ngModel)]="editUser.email" placeholder="Email" >
+						<input type="password" [(ngModel)]="editUser.password" placeholder="Password" >
+						<button (click)="uploadUsers()">Sign up</button>
+					</div>
+				</div>
+				<div class="login">
+					<div [formGroup]="loginForm" (ngSubmit)="loginUser()">
+						<label for="chk" aria-hidden="true">Login</label>
+						<input type="email" formControlName="email" placeholder="Email" required="">
+						<span *ngIf="">this input field is not valid</span>
+						<input type="password" formControlName="password" placeholder="Password" required="">
+						<button>Login</button>
+					</div>
+				</div>
+		</div>
+	</body>
 </html>
+

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, Validators} from '@angular/forms';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
 
@@ -9,26 +9,38 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  loginForm=new FormGroup({
+    email: new FormControl('',[Validators.required]),
+    password: new FormControl('',[Validators.required]),
+  })
+  loginUser()
+  {
+    console.warn(this.loginForm.value)
+  }
+
+  get email(){
+    return this.loginForm.get('user');
+  }
+
   constructor(private http: HttpClient) {
-    this.loadPosts();
+    this.loadUsers();
   }
   ngOnInit(): void {}
-  
-  posts: any[] = [];
+  users: any[] = [];
 
- editpost:edit={id:0 ,name:"",email:"",password:""}
+ editUser:edit={id:0 ,name:"",email:"",password:""}
 
-  loadPosts() {
-    this.http.get('http://localhost:8080/get').subscribe((posts: any) => {
-      this.posts = posts;
+  loadUsers() {
+    this.http.get('http://localhost:8080/get').subscribe((users: any) => {
+      this.users = users;
     });
   }
-  uploadPost() {
-    this.http.put('http://localhost:8080/put', this.editpost).subscribe(
+  uploadUsers() {
+    this.http.put('http://localhost:8080/put', this.editUser).subscribe(
       (res) => {
         alert('Registered Successfully');
         location.reload;
-        console.log(this.editpost);
+        console.log(this.editUser);
       },
       (err) => {
         alert('Error has occured please enter valid details');
