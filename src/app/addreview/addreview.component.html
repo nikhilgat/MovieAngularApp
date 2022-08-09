@@ -1,0 +1,27 @@
+<div>
+    <div class="reviewcard" id="blur">
+        <h1 style="text-align: center;">
+            ADD REVIEW
+        </h1>
+        <div>
+            <label> 
+                title
+                <input type="text" [(ngModel)]="editpost.title" placeholder="Title">
+            </label><br>
+            <label> 
+                desc
+                <input type="text" [(ngModel)]="editpost.description" placeholder="Description">
+            </label><br>
+            <label>
+                review
+                <input type="text" [(ngModel)]="editpost.review" placeholder="Review">
+            </label><br>
+            <label>
+                image Url
+                <input type="text" [(ngModel)]="editpost.imageUrl" placeholder="imageUrl">
+            </label>
+            <br>
+            <button onclick="uploadposts()">Post!</button>
+        </div>
+    </div>
+</div>

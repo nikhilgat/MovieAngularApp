@@ -9,18 +9,6 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  loginForm=new FormGroup({
-    email: new FormControl('',[Validators.required]),
-    password: new FormControl('',[Validators.required]),
-  })
-  loginUser()
-  {
-    console.warn(this.loginForm.value)
-  }
-
-  get email(){
-    return this.loginForm.get('user');
-  }
 
   constructor(private http: HttpClient) {
     this.loadUsers();

@@ -1,23 +1,28 @@
 <div class="testcard" href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" style="font-family: 'Jost', sans-serif">
-  <h1 style="font-style: italic; font-weight: 900;">
+  <h1 style="font-style: italic; font-weight: 900; color: aliceblue;">
     TRENDING NOW
   </h1>
+  <div *ngFor="let post of posts">
 <mat-card class="card">
       <h1>
-        MORTAL KOMBAT
+        {{post.title}}
       </h1>
-    <img class="imgs" mat-card-image src="assets/poster1.jpeg">
+    <img class="imgs" mat-card-image src="{{post.imageUrl}}">
     <mat-card-content>
       <p class="description">
-        The film follows Cole Young, a washed-up mixed martial arts fighter who is unaware of his hidden lineage or why the assassin Sub-Zero is hunting him down.
+        {{post.description}}
+      </p>
+      <p class="review">
+        {{post.review}}
       </p>
     </mat-card-content>
     <mat-card-actions>
       <button mat-button color="accent">Read More</button>
     </mat-card-actions>
   </mat-card>
- 
-  <mat-card class="card">
+  </div>
+  
+  <!-- <mat-card class="card">
     <h1>
       INSIDE OUT    
     </h1>
@@ -136,7 +141,7 @@
   <button mat-button color="accent">Read More</button>
 </mat-card-actions>
 </mat-card>
-</div>
+</div> -->
 <!-- FOOTER STARTS-->
 <div class="footcard">
   <section class="footer">
@@ -178,5 +183,4 @@
     </div>
   </section>
   </div>
-
 <!-- FOOTER ENDS -->

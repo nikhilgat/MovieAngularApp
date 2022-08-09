@@ -1,0 +1,16 @@
+.reviewcard
+{
+    position: relative;
+    left: 30%;
+    top: 100px;
+    max-width: 40%;
+    max-height: 500px;
+    padding: 2%;
+    background-color: rgb(255, 48, 48);
+    border-radius: 10px;
+
+}
+.reviewcard#blur.active
+{
+    filter: blur(20px);
+}

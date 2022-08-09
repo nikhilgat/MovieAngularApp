@@ -18,6 +18,7 @@ import { HomeComponent } from './Components/home/home.component';
 import { CatalogueComponent } from './Components/catalogue/catalogue.component';
 import { TestComponent } from './Components/test/test.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AddreviewComponent } from './addreview/addreview.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     CatalogueComponent,
     TestComponent,
+    AddreviewComponent,
   ],
   imports: [
     BrowserModule,
