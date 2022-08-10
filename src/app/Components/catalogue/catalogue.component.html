@@ -2,15 +2,15 @@
   <h1 style="font-style: italic; font-weight: 900; color: aliceblue;">
     TRENDING NOW
   </h1>
-  <a class="review" (click)="openDialog()">
-    <button mat-button style="color: white;">Add Review</button>
- </a>
-  <div *ngFor="let post of posts">
+  <a class="review">
+    <button mat-button (click)="openDialog()" style="color: white;">Add Review</button>
+  </a>
+  <div *ngFor="let post of posts" class="display">
 <mat-card class="card">
       <h1>
         {{post.title}}
       </h1>
-    <img class="imgs" mat-card-image src="assets/poster1.jpeg">
+    <img class="imgs" mat-card-image src="{{post.imageUrl}}">
     <mat-card-content>
       <p class="description">
         {{post.description}}

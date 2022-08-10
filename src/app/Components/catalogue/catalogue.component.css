@@ -16,14 +16,14 @@ body{
 
 .card
 {
-    min-width: 320px !important;
-    max-width: 320px;
+    min-width: 300px !important;
+    max-width: 300px;
     max-height: 450px;
     background-color:#212121;
     max-width:20%;
     border-radius: 10px;
     text-align: center;
-    display:inline-block;
+    display:flex;
     margin: 2%;
     box-shadow: 5px 20px 50px #000;
     place-items: center !important;
@@ -35,9 +35,9 @@ body{
 {
   margin-left: auto;
   margin-right: auto;
-  min-width: 280px;
-  max-width: 280px;
-  border-radius: 10px;
+  min-width: 268px;
+  max-width: 268px;
+  border-radius: 5px;
 }
 
 .footcard
@@ -89,6 +89,7 @@ body{
   min-height: 130px;
   max-height: 130px;
 }
+
 .card:hover {
   transform: scale(1.1);
   box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.4);
@@ -97,9 +98,17 @@ body{
   transition: .3s ease-in-out;
 
   }
+
   .review
   {
-    position: relative;
-    left: 600px;
-    bottom: 94px;
+    position: absolute;
+    top: -2px;
+    right: -1px;
+    margin: 15px;
+  }
+
+  .display
+  {
+    display: inline-block;
+    margin:22px;
   }
