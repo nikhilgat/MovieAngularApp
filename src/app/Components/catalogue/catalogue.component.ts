@@ -1,5 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { AddreviewComponent } from 'src/app/addreview/addreview.component';
+import { TestComponent } from '../test/test.component';
 
 @Component({
   selector: 'catalogue',
@@ -8,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CatalogueComponent implements OnInit {
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private dialogRef : MatDialog ) {
     this.loadposts();
   }
   posts: any[] = [];
@@ -22,4 +25,7 @@ export class CatalogueComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  openDialog(){
+    this.dialogRef.open(AddreviewComponent)
+  }
 }

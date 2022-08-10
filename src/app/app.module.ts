@@ -19,6 +19,8 @@ import { CatalogueComponent } from './Components/catalogue/catalogue.component';
 import { TestComponent } from './Components/test/test.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AddreviewComponent } from './addreview/addreview.component';
+import {MatDialogModule} from '@angular/material/dialog';
+
 
 @NgModule({
   declarations: [
@@ -44,7 +46,8 @@ import { AddreviewComponent } from './addreview/addreview.component';
     MatInputModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule
 
   ],
   providers: [],

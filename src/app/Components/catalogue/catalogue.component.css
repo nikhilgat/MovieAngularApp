@@ -97,3 +97,9 @@ body{
   transition: .3s ease-in-out;
 
   }
+  .review
+  {
+    position: relative;
+    left: 600px;
+    bottom: 94px;
+  }

@@ -1,5 +1,6 @@
+
 <div>
-    <div class="reviewcard" id="blur">
+    <div>
         <h1 style="text-align: center;">
             ADD REVIEW
         </h1>
@@ -21,7 +22,7 @@
                 <input type="text" [(ngModel)]="editpost.imageUrl" placeholder="imageUrl">
             </label>
             <br>
-            <button onclick="uploadposts()">Post!</button>
+            <button (click)="uploadposts()">Post!</button>
         </div>
     </div>
 </div>
