@@ -1,4 +1,6 @@
-body{
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500&family=Nunito:wght@300&family=Quicksand:wght@300&display=swap');
+body
+{
 	margin: 0;
 	padding: 0;
 	display: flex;
@@ -6,7 +8,9 @@ body{
 	align-items: center;
 	min-height: 100vh;
 	font-family: 'Jost', sans-serif;
-  background: linear-gradient(to bottom, #212121, #4fb783, #212121);}
+  background: linear-gradient(to bottom, #212121, #4fb783, #212121);
+}
+
 .testcard
 {
     text-align: center;
@@ -18,9 +22,9 @@ body{
 {
     min-width: 300px !important;
     max-width: 300px;
+    min-height: 450px;
     max-height: 450px;
     background-color:#212121;
-    max-width:20%;
     border-radius: 10px;
     text-align: center;
     display:flex;
@@ -31,13 +35,22 @@ body{
     place-content: center !important;
 
 }
+.title
+{
+  font-family: 'Quicksand', sans-serif;
+}
+
 .imgs
 {
   margin-left: auto;
   margin-right: auto;
   min-width: 268px;
   max-width: 268px;
+  min-height: 170px;
+  max-height: 170px;
   border-radius: 5px;
+  position: relative;
+  right: 1px;
 }
 
 .footcard
@@ -109,6 +122,13 @@ body{
 
   .display
   {
-    display: inline-block;
+    max-width: fit-content;
+    max-height: fit-content;
     margin:22px;
+    display: inline-flex;
+  }
+  .readmorebtn
+  {
+    position: relative;
+    bottom: 15px;
   }
