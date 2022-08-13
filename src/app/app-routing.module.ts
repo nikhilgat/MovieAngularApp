@@ -15,9 +15,6 @@ const routes: Routes = [
   { path: 'catalogue', component: CatalogueComponent },
   { path: 'test', component: TestComponent },
   { path: 'addreview', component: AddreviewComponent }
-
-
-
 ];
 
 @NgModule({

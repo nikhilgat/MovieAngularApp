@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
 
-
 @Component({
   selector: 'register',
   templateUrl: './register.component.html',
@@ -14,7 +13,6 @@ export class RegisterComponent implements OnInit {
     if (this.email.hasError('required')) {
       return 'You must enter a value';
     }
-
     return this.email.hasError('email') ? 'Not a valid email' : '';
   }
   

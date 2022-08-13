@@ -1,28 +1,19 @@
-
-.topbar
-{
+.topbar {
   height: 60px;
 }
-.logo
-  {
-    pointer-events: cursor;
-    position: relative;
-    top: -2px;
-  }
-  .matbtn
-  {
-    padding: 20px;
-  }
-  button:hover{
-    background: #4fb783;
-    transition: .3s ease-in;
 
-  }  
+.logo {
+  pointer-events: cursor;
+  position: relative;
+  top: -2px;
+}
 
-  /* 
-  
-  
-  */
+.matbtn {
+  padding: 20px;
+}
 
+button:hover {
+  background: #4fb783;
+  transition: .3s ease-in;
 
- 
+}
