@@ -1,36 +1,36 @@
 <div>
-    <mat-card class="card" style="text-align: center;">
-        <h1>
-            REGISTER
-        </h1>
-            <p>
-            <mat-form-field appearance="legacy">
-              <mat-label>Full Name</mat-label>
-              <input type="name" matInput placeholder="John Adam" required>
-            </mat-form-field>
-          </p>
-          <p>
-            <mat-form-field style="color: white;" appearance="legacy">
-              <mat-label>E-mail</mat-label>
-              <input matInput placeholder="abc@gmail.com" [formControl]="email" required>
-              <mat-error *ngIf="email.invalid">{{getErrorEmail()}}</mat-error>
-            </mat-form-field>
-          </p>
-          <p>
-                <mat-form-field appearance="legacy">
-                  <mat-label>Password</mat-label>
-                  <input type="password" matInput placeholder="********" ngModel>
-                </mat-form-field>
-              </p>
-              <p>
-                <mat-form-field appearance="legacy">
-                  <mat-label>OTP</mat-label>
-                  <input matInput placeholder="1234" ngModel>
-                </mat-form-field>
-              </p>
-              <h3 style="color: white;">
-                Already have an account? <a href="/login">Login</a>
-              </h3>
-              <button mat-raised-button color="link">Sign-Up</button>
-    </mat-card>
+  <mat-card class="card" style="text-align: center;">
+    <h1>
+      REGISTER
+    </h1>
+    <p>
+      <mat-form-field appearance="legacy">
+        <mat-label>Full Name</mat-label>
+        <input type="name" matInput placeholder="John Adam" required>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field style="color: white;" appearance="legacy">
+        <mat-label>E-mail</mat-label>
+        <input matInput placeholder="abc@gmail.com" [formControl]="email" required>
+        <mat-error *ngIf="email.invalid">{{getErrorEmail()}}</mat-error>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="legacy">
+        <mat-label>Password</mat-label>
+        <input type="password" matInput placeholder="********" ngModel>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="legacy">
+        <mat-label>OTP</mat-label>
+        <input matInput placeholder="1234" ngModel>
+      </mat-form-field>
+    </p>
+    <h3 style="color: white;">
+      Already have an account? <a href="/login">Login</a>
+    </h3>
+    <button mat-raised-button color="link">Sign-Up</button>
+  </mat-card>
 </div>

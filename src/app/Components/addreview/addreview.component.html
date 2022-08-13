@@ -1,0 +1,28 @@
+<div>
+    <div style="text-align: center;">
+        <h1>
+            ADD REVIEW
+        </h1>
+        <div>
+            <p>
+                <mat-form-field appearance="legacy">
+                    <input matInput type="text" [(ngModel)]="editpost.title" placeholder="Title">
+                </mat-form-field>
+                <br>
+                <mat-form-field appearance="legacy">
+                    <input matInput type="text" [(ngModel)]="editpost.description" placeholder="Description">
+                </mat-form-field>
+                <br>
+                <!-- <mat-form-field appearance="legacy">
+                    <input matInput type="text" [(ngModel)]="editpost.review" placeholder="Review">
+                  </mat-form-field> -->
+                <br>
+                <mat-form-field appearance="legacy">
+                    <input matInput type="text" [(ngModel)]="editpost.imageUrl" placeholder="Image-Url">
+                </mat-form-field>
+            </p>
+            <br>
+            <button class="btn" mat-raised-button color="accent" (click)="uploadposts()">Post!</button>
+        </div>
+    </div>
+</div>
