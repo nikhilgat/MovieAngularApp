@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500&family=Nunito:wght@300&family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300&display=swap');
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Jost', sans-serif;
+  background: linear-gradient(to bottom, #212121, #4fb783, #212121);
+}
+
+.testcard {
+  text-align: center;
+  background: linear-gradient(to bottom, #212121, #4fb783, #212121);
+
+}
+
+.card {
+  min-width: 300px !important;
+  max-width: 300px;
+  min-height: 450px;
+  max-height: 450px;
+  background-color: #212121;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  margin: 2%;
+  box-shadow: 5px 20px 50px #000;
+  place-items: center !important;
+  align-items: center !important;
+  place-content: center !important;
+
+}
+
+.title {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.imgs {
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 268px;
+  max-width: 268px;
+  min-height: 170px;
+  max-height: 170px;
+  border-radius: 5px;
+  position: relative;
+  right: 1px;
+}
+
+.footcard {
+  max-height: 100px;
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+.footer {
+  padding: 40px 0;
+  background-color: #212121;
+}
+
+.icons {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.list {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 0px;
+  font-style: oblique;
+  text-decoration: none;
+  padding-left: 30px;
+  position: relative;
+  right: 21px;
+}
+
+.icons a {
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin: 0px;
+  width: 200px;
+}
+
+button:hover {
+  background: #4fb783;
+  transition: .3s ease-in;
+
+}
+
+.description {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  min-height: 130px;
+  max-height: 130px;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.4);
+  z-index: 3;
+  border-color: #4fb783 ! important;
+  transition: .3s ease-in-out;
+
+}
+
+.review {
+  position: absolute;
+  top: -2px;
+  right: -1px;
+  margin: 15px;
+}
+
+.display {
+  max-width: fit-content;
+  max-height: fit-content;
+  margin: 22px;
+  display: inline-flex;
+}
+
+.readmorebtn {
+  position: relative;
+  bottom: 15px;
+}
+
+// 
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Sacramento&display=swap');
+
+$cursive: 'Great Vibes', cursive;
+$handwriting: 'Sacramento', cursive;
+
+$white: #fff;
+$black: #000;
+
+@mixin hc(){
+  left: 50%;
+  transform: translatex(-50%);
+}
+
+@mixin vc(){
+  top: 50%;
+  transform: translatey(-50%);
+}
+
+@mixin cc(){
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin scrollbars($size, $foreground-color, $background-color) {
+  ::-webkit-scrollbar-button{
+    display: none;
+  }
+  ::-webkit-scrollbar {
+    width:  $size;
+    height: $size;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: $foreground-color;
+    border: 1px solid lighten($foreground-color, 10%);
+    cursor: pointer;
+  }
+  ::-webkit-scrollbar-track {
+    background: $background-color;
+    width: calc(#{$size} * 2);
+    border: 2px solid lighten($background-color, 10%);
+  }
+  ::-webkit-scrollbar-track-piece {
+    background: $background-color;
+    width: calc(#{$size} / 2);
+    border: 2px solid lighten($background-color, 10%);
+  }
+  body {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
+}
+
+@include scrollbars(2px, rgba(255,255,255,0.15), transparent);
+
+div{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 5vmin;
+}
+
+body{
+  display: grid;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: $handwriting;
+  color: $white;
+  background: #333;
+  background-image: 
+    radial-gradient(ellipse at bottom left, rgba(0,163,203,1) 40%, rgba(0,163,203,0) 40%),
+    radial-gradient(ellipse at top right, rgba(0,163,203,1) 30%, rgba(0,163,203,0) 30%),
+    linear-gradient(to right, rgba(98,87,147,1) 0%, rgba(98,87,147,1) 33%, rgba(213,93,100,1) 33%, rgba(213,93,100,1) 66%, rgba(228,145,41,1) 66%);
+  background-size: 50% 100%;
+  
+  .message{
+    position: absolute;
+    right:  0.5vw;
+    top: 1vw;
+    max-width: 60vw;
+    font-size: 12px;
+    font-family: "Open Sans", sans-serif;
+
+    a{
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid #444;
+      &:hover{
+        border-width: 3px;
+      }
+    }
+
+  }
+  
+  .card {
+    margin: auto;
+    padding: 2em;
+    border-radius: 1em;
+    border: 1px solid transparentize($white, 0.5);
+    text-shadow: 0 0 1em transparentize($black, 0.5);
+    background: transparentize($white, 0.8);
+    backdrop-filter: blur(20px);
+    transform: perspective(500px);
+    transform-style: preserve-3d;
+    
+    .welcome {
+      font-family: $handwriting;
+      transform: translateZ(20px);
+    }
+    
+    .year {
+      font-family: $cursive;
+      font-size: 2.5em;
+      
+      span {
+        display: block;
+        transform: translateZ(40px);
+        &:nth-child(2){
+          padding-left: 1em;
+          transform: translateZ(60px);
+        }
+        &:nth-child(3){
+          padding-left: 2em;
+          transform: translateZ(80px);
+        }
+      }
+      
+    }
+    
+  }
+  
+}

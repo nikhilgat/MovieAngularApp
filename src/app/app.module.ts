@@ -20,6 +20,7 @@ import { TestComponent } from './Components/test/test.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AddreviewComponent } from './Components/addreview/addreview.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { ReviewComponent } from './Components/review/review.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     HomeComponent,
     CatalogueComponent,
     TestComponent,
-    AddreviewComponent
+    AddreviewComponent,
+    ReviewComponent
   ],
   imports: [
     BrowserModule,
