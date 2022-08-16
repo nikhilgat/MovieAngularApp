@@ -14,18 +14,18 @@ body {
 .testcard {
   text-align: center;
   background: linear-gradient(to bottom, #212121, #4fb783, #212121);
-
 }
 
 .card {
-  min-width: 300px !important;
-  max-width: 300px;
+  min-width: 280px !important;
+  max-width: 280px;
   min-height: 450px;
   max-height: 450px;
   background-color: #212121;
   border-radius: 10px;
   text-align: center;
-  display: flex;
+  display: inline-block;
+  /* display: flex; */
   margin: 0%;
   box-shadow: 5px 20px 50px #000;
   place-items: center !important;
@@ -36,6 +36,9 @@ body {
 
 .title {
   font-family: 'Quicksand', sans-serif;
+  max-width: 280px;
+  max-height: 30px;
+  font-size: large;
 }
 
 .imgs {
@@ -47,7 +50,7 @@ body {
   max-height: 170px;
   border-radius: 5px;
   position: relative;
-  right: 1px;
+  right: 11px;
 }
 
 .footcard {
@@ -97,7 +100,7 @@ button:hover {
 .description {
   font-family: 'Barlow Semi Condensed', sans-serif;
   min-height: 130px;
-  max-height: 130px;
+  max-height: 150px;
 }
 
 .card:hover {
