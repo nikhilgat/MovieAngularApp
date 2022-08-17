@@ -21,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AddreviewComponent } from './Components/addreview/addreview.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ReviewComponent } from './Components/review/review.component';
+import { DeletereviewComponent } from './Components/deletereview/deletereview.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ReviewComponent } from './Components/review/review.component';
     CatalogueComponent,
     TestComponent,
     AddreviewComponent,
-    ReviewComponent
+    ReviewComponent,
+    DeletereviewComponent
   ],
   imports: [
     BrowserModule,

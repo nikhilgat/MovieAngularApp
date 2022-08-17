@@ -19,12 +19,12 @@ export class LoginComponent implements OnInit {
  editUser:edit={id:0 ,name:"",email:"",password:""}
 
   loadUsers() {
-    this.http.get('http://localhost:8080/get').subscribe((users: any) => {
+    this.http.get('http://localhost:8080/retrieve').subscribe((users: any) => {
       this.users = users;
     });
   }
   uploadUsers() {
-    this.http.put('http://localhost:8080/put', this.editUser).subscribe(
+    this.http.put('http://localhost:8080/update', this.editUser).subscribe(
       (res) => {
         alert('Registered Successfully');
         location.reload;

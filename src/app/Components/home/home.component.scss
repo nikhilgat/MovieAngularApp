@@ -11,10 +11,14 @@ body {
     min-height: 100vh;
     font-family: 'Jost', sans-serif;
     background: linear-gradient(to bottom, #212121, #4fb783, #212121);
+    overflow: hidden;
+
 }
+
 
 .bkghome {
     margin: auto;
+    
 }
 
 .heading {
@@ -42,6 +46,7 @@ body {
     background-color: rgb(0, 0, 0);
     border-radius: 10px;
     margin: 32px;
+    overflow: hidden;
 
 }
 
@@ -67,8 +72,6 @@ body {
 	display: inline-block;
     border-radius: 15px;
     /* box-shadow: 5px 5px 5px #000; */
-
-    
 }
 
 .button--atlas {
@@ -104,6 +107,8 @@ body {
 	animation: marquee 1s linear infinite;
 	animation-play-state: paused;
 	opacity: 0;
+  overflow: hidden;
+
 }
 
 .button--atlas:hover .marquee__inner {
@@ -117,6 +122,7 @@ body {
 	white-space: nowrap;
 	font-style: italic;
 	padding: 0.5rem 0.5rem;
+  
 }
 
 @keyframes marquee {
@@ -145,6 +151,8 @@ body {
 body {
     background: linear-gradient(to bottom, #212121, #4fb783, #212121);
     margin: 0;
+    overflow: hidden;
+
   }
   
   $bubble-count: 50;
@@ -168,7 +176,7 @@ body {
   .bubble {
     position: absolute;
     left: var(--bubble-left-offset);
-    bottom: -75%;
+    bottom: -30%;
     display: block;
     width: var(--bubble-radius);
     height: var(--bubble-radius);

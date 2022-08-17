@@ -31,7 +31,6 @@ body {
   place-items: center !important;
   align-items: center !important;
   place-content: center !important;
-
 }
 
 .title {
@@ -129,4 +128,10 @@ button:hover {
 .readmorebtn {
   position: relative;
   bottom: 15px;
+}
+.delete {
+  position: absolute;
+  top: -2px;
+  right: 110px;
+  margin: 15px;
 }

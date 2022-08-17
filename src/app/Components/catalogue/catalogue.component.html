@@ -4,7 +4,10 @@
     TRENDING NOW
   </h1>
   <a class="review">
-    <button mat-button (click)="openDialog()" style="color: white; font-family: 'Quicksand', sans-serif; font-weight: 900;">Add Review</button>
+    <button mat-button (click)="openDialog()" style="color: white;">Add Review</button>
+  </a>
+  <a class="delete">
+    <button mat-button (click)="deleteDialog()" style="color: white;">Delete</button>
   </a>
   <div *ngFor="let post of posts" class="display">
     <ol>
@@ -34,7 +37,7 @@
 <div class="footcard">
   <section class="footer">
     <div class="icons">
-      <a href="#">
+      <a href="https://www.instagram.com/eury.ae/">
         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-instagram"
           viewBox="0 0 16 16">
           <path
