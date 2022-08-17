@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { AddreviewComponent } from '../addreview/addreview.component';
+import { DeletereviewComponent } from '../deletereview/deletereview.component';
 import { TestComponent } from '../test/test.component';
 
 @Component({
@@ -28,4 +29,25 @@ export class CatalogueComponent implements OnInit {
   openDialog(){
     this.dialogRef.open(AddreviewComponent)
   }
+  deleteDialog(){
+    this.dialogRef.open(DeletereviewComponent)
+  }
+
+  // deletepost:edit={
+  //   id: 0,
+  //   title: '',
+  //   description: '',
+  //   review: '',
+  //   imageUrl: ''
+  // }
+
+//   deleteposts() {
+//     this.http.get('http://localhost:8080/deleteposts/{id}').subscribe((posts: any) => {
+//       this.posts = posts;
+//     });
+// }
+
 }
+// export interface edit{
+//   id: number
+// }
