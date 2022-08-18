@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import {PostPayload} from '../PostPayload';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -12,10 +13,11 @@ export class AddreviewComponent implements OnInit {
 
   constructor(private http: HttpClient) {
   }
+  
   ngOnInit(): void {}
   posts: any[] = [];
 
- editpost:edit={id:0 ,title:"",description:"",review:"", imageUrl:""}
+ editpost:PostPayload={id:"" ,title:"",description:"",review:"", imageUrl:""}
 
   loadposts() {
     this.http.get('http://localhost:8080/getposts').subscribe((posts: any) => {
@@ -38,10 +40,4 @@ export class AddreviewComponent implements OnInit {
   }
   }
 }
-export interface edit{
-  id:number
-  title:string
-  description:string
-  review:string
-  imageUrl:string
-}
+

@@ -3,7 +3,12 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { AddreviewComponent } from '../addreview/addreview.component';
 import { DeletereviewComponent } from '../deletereview/deletereview.component';
+import { LocalStorageService } from 'ngx-webstorage';
+import { PostPayload } from '../PostPayload';
 import { TestComponent } from '../test/test.component';
+import { Router } from '@angular/router';
+import { LocalStorage } from 'ngx-webstorage';
+
 
 @Component({
   selector: 'catalogue',
@@ -12,11 +17,13 @@ import { TestComponent } from '../test/test.component';
 })
 export class CatalogueComponent implements OnInit {
 
-  constructor(private http: HttpClient, private dialogRef : MatDialog ) {
+  id:any;
+  constructor(private http: HttpClient, private dialogRef : MatDialog,private localStorage:LocalStorageService,private router:Router) {
     this.loadposts();
   }
-  posts: any[] = [];
-  
+  posts:any="";
+
+
   loadposts() {
     this.http.get('http://localhost:8080/getposts').subscribe((posts: any) => {
       this.posts = posts;
@@ -31,6 +38,12 @@ export class CatalogueComponent implements OnInit {
   }
   deleteDialog(){
     this.dialogRef.open(DeletereviewComponent)
+  }
+
+  setId(id: number) {
+    this.id = id;
+    this.localStorage.store('postId', this.id);
+    this.router.navigateByUrl("/review");
   }
 
   // deletepost:edit={

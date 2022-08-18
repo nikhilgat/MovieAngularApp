@@ -22,6 +22,10 @@ import { AddreviewComponent } from './Components/addreview/addreview.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ReviewComponent } from './Components/review/review.component';
 import { DeletereviewComponent } from './Components/deletereview/deletereview.component';
+import { PostService } from './Components/post.service';
+import { NgxWebstorageModule } from 'ngx-webstorage';
+
+
 
 @NgModule({
   declarations: [
@@ -50,10 +54,11 @@ import { DeletereviewComponent } from './Components/deletereview/deletereview.co
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatDialogModule
+    MatDialogModule,
+    NgxWebstorageModule.forRoot()
 
-  ],
-  providers: [],
+],
+  providers: [PostService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
