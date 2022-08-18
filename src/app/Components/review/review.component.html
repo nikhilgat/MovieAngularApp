@@ -1,15 +1,15 @@
-
 <div class="rev">
     <h1 class="title">
-        title
+        {{posts.title}}
     </h1>
-    <!-- <h3 class="description">
-        description
-    </h3> -->
+    <h3 class="description">
+        {{posts.description}}
+    </h3>
     <div class="card">
-    <img class="imgs" mat-card-image src="https://images.ctfassets.net/hrltx12pl8hq/4plHDVeTkWuFMihxQnzBSb/aea2f06d675c3d710d095306e377382f/shutterstock_554314555_copy.jpg">
+        <img class="imgs" mat-card-image src="{{posts.imageUrl}}">
     </div>
     <p class="review">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        {{posts.review}}
     </p>
+    <button (click)="deletepost()">delete</button>
 </div>
