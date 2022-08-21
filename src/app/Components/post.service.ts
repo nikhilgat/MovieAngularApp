@@ -15,12 +15,6 @@ export class PostService {
   gotid:number=0;
   posts:any=[];
 
-  // getByid():{
-  //   let id=this.localStorage.retrieve('postId');
-  //   let url="http://localhost:8080/getposts/"+id;
-  //   this.posts=this.http.get<Array<PostPayload>>(url);
-  //   console.log(this.posts)
-  // }
 
   getPostByid() {
     let id = this.localStorage.retrieve('postId');

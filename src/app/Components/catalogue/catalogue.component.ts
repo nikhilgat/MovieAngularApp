@@ -45,22 +45,4 @@ export class CatalogueComponent implements OnInit {
     this.localStorage.store('postId', this.id);
     this.router.navigateByUrl("/review");
   }
-
-  // deletepost:edit={
-  //   id: 0,
-  //   title: '',
-  //   description: '',
-  //   review: '',
-  //   imageUrl: ''
-  // }
-
-//   deleteposts() {
-//     this.http.get('http://localhost:8080/deleteposts/{id}').subscribe((posts: any) => {
-//       this.posts = posts;
-//     });
-// }
-
 }
-// export interface edit{
-//   id: number
-// }

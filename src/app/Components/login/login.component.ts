@@ -11,7 +11,7 @@ import { HttpClient } from '@angular/common/http';
 export class LoginComponent implements OnInit {
 
   constructor(private http: HttpClient) {
-    this.loadUsers();
+    // this.loadUsers();
   }
   ngOnInit(): void {}
   users: any[] = [];
@@ -19,24 +19,28 @@ export class LoginComponent implements OnInit {
  editUser:edit={id:0 ,name:"",email:"",password:""}
 
   loadUsers() {
-    this.http.get('http://localhost:8080/retrieve').subscribe((users: any) => {
+    this.http.get('http://localhost:8080/getusers').subscribe((users: any) => {
       this.users = users;
     });
   }
   uploadUsers() {
-    this.http.put('http://localhost:8080/update', this.editUser).subscribe(
+  if(this.editUser.name.length>0 && this.editUser.email.length>0 && this.editUser.password.length>0)
+    {
+    this.http.put('http://localhost:8080/updateusers', this.editUser).subscribe(
       (res) => {
         alert('Registered Successfully');
         location.reload;
         console.log(this.editUser);
       },
-      (err) => {
-        alert('Error has occured please enter valid details');
-        location.reload;
-      }
     );
+    }
+      else
+      {
+        alert('Error has occured please enter valid details');
+          }
+      }
   }
-}
+
 export interface edit{
   id:number
   name:string

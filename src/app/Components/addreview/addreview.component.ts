@@ -25,7 +25,7 @@ export class AddreviewComponent implements OnInit {
     });
   }
   uploadposts() {
-    if(this.editpost.title.length>0 && this.editpost.description.length>0 && this.editpost.imageUrl.length>0)
+    if(this.editpost.title.length>0 && this.editpost.description.length>0 && this.editpost.imageUrl.length>0 && this.editpost.review.length>0)
     {
       this.http.post('http://localhost:8080/postposts', this.editpost).subscribe(
         (res) => {
