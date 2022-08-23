@@ -2,7 +2,7 @@
 
 
 .bkg
-{   min-height: 200%;
+{   min-height: 150%;
     min-width: 100%;
     background: linear-gradient(to bottom, #212121, #4fb783, #212121);
 }
@@ -26,7 +26,6 @@
     max-width: 700px;
     max-block-size: 10%;
     text-align: left;
-
 }
 
 .image
@@ -56,4 +55,11 @@
     width: 8em;
     font-size: large;
     font-weight: 600;
+  }
+
+  .delete {
+    position: absolute;
+    top: -2px;
+    right: 110px;
+    margin: 15px;
   }

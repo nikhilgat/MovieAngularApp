@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {FormControl, FormGroup, Validators, FormBuilder} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
 
@@ -10,10 +10,24 @@ import { HttpClient } from '@angular/common/http';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private http: HttpClient) {
+  public loginForm! : FormGroup
+  public registerForm! : FormGroup
+
+  constructor(private http: HttpClient, private formBuilder : FormBuilder) {
     // this.loadUsers();
   }
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.loginForm = this.formBuilder.group({
+      loginEmail:['',Validators.required],
+      loginPassword:['',Validators.required]
+    })
+    this.registerForm = this.formBuilder.group({
+      username:['',Validators.required],
+      registerEmail:['',Validators.required],
+      registerPassword:['',Validators.required]
+    })
+
+  }
   users: any[] = [];
 
  editUser:edit={id:0 ,name:"",email:"",password:""}

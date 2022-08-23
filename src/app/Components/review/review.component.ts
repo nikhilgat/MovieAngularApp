@@ -4,6 +4,9 @@ import { CatalogueComponent } from '../catalogue/catalogue.component';
 import { HttpClient } from '@angular/common/http';
 import { PostService } from '../post.service';
 import { PostPayload } from '../PostPayload';
+import { DeletereviewComponent } from '../deletereview/deletereview.component';
+import { MatDialog } from '@angular/material/dialog';
+
 
 @Component({
   selector: 'app-review',
@@ -15,7 +18,7 @@ export class ReviewComponent implements OnInit {
   gotid:number=0;
   posts:any;
 
-  constructor(private  postService:PostService) { 
+  constructor(private  postService:PostService, private dialogRef : MatDialog) { 
     this.postService.getPostByid().subscribe((res) => {
       this.posts = res;
     });
@@ -23,6 +26,9 @@ export class ReviewComponent implements OnInit {
 
   deletepost(){
     this.postService.deletePostByid();
+  }
+  deleteDialog(){
+    this.dialogRef.open(DeletereviewComponent)
   }
 
   ngOnInit(): void {

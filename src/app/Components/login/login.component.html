@@ -1,34 +1,49 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<title>Slide Navbar</title>
 	<link rel="stylesheet" type="text/css" href="login.component.css">
 	<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
 </head>
-
-<body>
-	<div class="main">
-		<input type="checkbox" id="chk">
-		<div class="signup">
-			<div>
-				<label for="chk" aria-hidden="true">Sign up</label>
-				<input type="text" [(ngModel)]="editUser.name" placeholder="User name">
-				<input type="email" [(ngModel)]="editUser.email" placeholder="Email">
-				<input type="password" [(ngModel)]="editUser.password" placeholder="Password">
-				<button (click)="uploadUsers()">Sign up</button>
+	<body>
+		<div class="main">
+			<input type="checkbox" id="chk">
+			<div class="signup">
+				<div>
+					<form [formGroup]="registerForm">
+					<label for="chk" aria-hidden="true">Sign up</label>
+					<input type="text" formControlName="username" [(ngModel)]="editUser.name" placeholder="User name">
+					<div style="text-align: center;">
+						<span class="text-danger" *ngIf="registerForm.controls['username'].dirty && registerForm.hasError('required','username')">*Please enter a Username</span>
+						</div>
+					<input type="email" formControlName="registerEmail" [(ngModel)]="editUser.email" placeholder="Email">
+					<div style="text-align: center;">
+						<span class="text-danger" *ngIf="registerForm.controls['registerEmail'].dirty && registerForm.hasError('required','registerEmail')">*Please enter the Email</span>
+						</div>
+					<input type="password" formControlName="registerPassword" [(ngModel)]="editUser.password" placeholder="Password">
+					<div style="text-align: center;">
+						<span class="text-danger" *ngIf="registerForm.controls['registerPassword'].dirty && registerForm.hasError('required','registerPassword')">*Please enter the Password</span>
+						</div>
+					<button (click)="uploadUsers()">Sign up</button>
+					</form>
+				</div>
+			</div>
+			<div class="login">
+				<div>
+					<form [formGroup]="loginForm">
+					<label for="chk" aria-hidden="true">Login</label>
+					<input type="email" formControlName="loginEmail" placeholder="Email">
+					<div style="text-align: center;">
+					<span class="text-danger" *ngIf="loginForm.controls['loginEmail'].dirty && loginForm.hasError('required','loginEmail')">*Please enter the Email</span>
+					</div>
+					<input type="password" formControlName="loginPassword" placeholder="Password">
+					<div style="text-align: center;">
+					<span class="text-danger" *ngIf="loginForm.controls['loginPassword'].dirty && loginForm.hasError('required','loginPassword')">*Please enter the password</span>
+					</div>
+					<button type="submit" [disabled]="!loginForm.valid">Login</button>
+					</form>
+				</div>
 			</div>
 		</div>
-		<div class="login">
-			<div>
-				<label for="chk" aria-hidden="true">Login</label>
-				<input type="email" formControlName="email" placeholder="Email" required="">
-				<span *ngIf="">this input field is not valid</span>
-				<input type="password" formControlName="password" placeholder="Password" required="">
-				<button>Login</button>
-			</div>
-		</div>
-	</div>
-</body>
-
+	</body>
 </html>
