@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators, FormBuilder} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'login',
@@ -13,7 +14,7 @@ export class LoginComponent implements OnInit {
   public loginForm! : FormGroup
   public registerForm! : FormGroup
 
-  constructor(private http: HttpClient, private formBuilder : FormBuilder) {
+  constructor(private http: HttpClient, private formBuilder : FormBuilder, private router: Router) {
     // this.loadUsers();
   }
   ngOnInit(): void {
@@ -44,6 +45,8 @@ export class LoginComponent implements OnInit {
       (res) => {
         alert('Registered Successfully');
         location.reload;
+        this.registerForm.reset();
+        this.router.navigate(['home']);
         console.log(this.editUser);
       },
     );

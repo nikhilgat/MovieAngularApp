@@ -1,10 +1,15 @@
 <div class="testcard" href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" style="font-family: 'Jost', sans-serif">
     <h1 style="font-style: italic; font-weight: 900; color: aliceblue;">
-        TRENDING NOW
+        LATEST REVIEWS
     </h1>
     <a class="review">
         <button mat-button (click)="openDialog()" style="color: white;font-family: 'Jost', sans-serif;">Add Review</button>
     </a>
+    <script>
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+            }
+    </script>
     <!-- <a class="delete">
         <button mat-button (click)="deleteDialog()" style="color: white;font-family: 'Jost', sans-serif;">Delete</button>
     </a> -->

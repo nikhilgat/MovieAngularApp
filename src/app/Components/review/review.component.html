@@ -1,7 +1,13 @@
+<script>
+    window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+        }
+</script>
 <div class="bkg">
-    <a class="delete">
+        <a class="delete">
         <button mat-button (click)="deleteDialog()" style="color: white;font-family: 'Jost', sans-serif;">Delete</button>
     </a>
+    
     <h1 class="title">
         {{posts.title}}
     </h1>

@@ -4,7 +4,7 @@
             ADD REVIEW
         </h1>
         <div>
-            <p>
+            <div>
                 <mat-form-field appearance="legacy">
                     <input matInput type="text" [(ngModel)]="editpost.title" placeholder="Title">
                 </mat-form-field>
@@ -20,7 +20,7 @@
                 <mat-form-field appearance="legacy">
                     <input matInput type="text" [(ngModel)]="editpost.imageUrl" placeholder="Image-Url">
                 </mat-form-field>
-            </p>
+            </div>
             <br>
             <button class="btn" mat-raised-button color="accent" style="font-family: 'Quicksand', sans-serif" (click)="uploadposts()">Post!</button>
         </div>

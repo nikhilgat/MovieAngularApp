@@ -1,8 +1,9 @@
 import { HttpClient } from '@angular/common/http';
-import {FormControl, FormGroup, Validators} from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {PostPayload} from '../PostPayload';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-addreview',
@@ -11,7 +12,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddreviewComponent implements OnInit {
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private router: Router) {
   }
   
   ngOnInit(): void {}
@@ -32,6 +33,8 @@ export class AddreviewComponent implements OnInit {
           alert('Posted Successfully');
           location.reload;
           console.log(this.editpost);
+          this.router.navigate(['catalogue']);
+
         },
       );
     }
