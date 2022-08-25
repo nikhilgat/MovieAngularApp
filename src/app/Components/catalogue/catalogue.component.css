@@ -139,3 +139,6 @@ button:hover {
   transition: .3s ease-in;
 
 }
+.dialog-container-custom .mat-dialog-container {
+  background-color: #4fb783;
+}

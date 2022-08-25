@@ -1,28 +1,21 @@
-<div class="reviewcard">
-    <div style="text-align: center; ">
-        <h1 style="font-family: 'Quicksand', sans-serif">
-            ADD REVIEW
-        </h1>
-        <div>
-            <div>
-                <mat-form-field appearance="legacy">
-                    <input matInput type="text" [(ngModel)]="editpost.title" placeholder="Title">
-                </mat-form-field>
-                <br>
-                <mat-form-field appearance="legacy">
-                    <input matInput type="text" [(ngModel)]="editpost.description" placeholder="Description">
-                </mat-form-field>
-                <br>
-                <mat-form-field appearance="legacy">
-                    <input matInput type="text" [(ngModel)]="editpost.review" placeholder="Review">
-                </mat-form-field>
-                <br>
-                <mat-form-field appearance="legacy">
-                    <input matInput type="text" [(ngModel)]="editpost.imageUrl" placeholder="Image-Url">
-                </mat-form-field>
-            </div>
-            <br>
-            <button class="btn" mat-raised-button color="accent" style="font-family: 'Quicksand', sans-serif" (click)="uploadposts()">Post!</button>
-        </div>
+
+<div class="form">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+    <div class="title">Add Review</div>
+    <div class="input-container ic1">
+      <input  class="input" [(ngModel)]="editpost.title" type="text" placeholder="Title (0-20 Characters Only)" />
     </div>
-</div>
+    <div class="input-container ic2">
+      <input  class="input" [(ngModel)]="editpost.description" type="text" placeholder="Description (0-250 Characters Only)" />
+    </div>
+    <div class="input-container ic2">
+      <input  class="input" [(ngModel)]="editpost.imageUrl" type="text" placeholder="Image-Url" />
+    </div>
+    <div class="input-box ic3">
+      <textarea  class="input" [(ngModel)]="editpost.review" type="text" placeholder="Review (0-1000 Characters Only)"></textarea> 
+    </div>
+    <button type="text" class="submit" (click)="uploadposts()">submit</button>
+  </div>
+
+
+
