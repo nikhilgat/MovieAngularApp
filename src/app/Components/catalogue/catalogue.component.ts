@@ -33,8 +33,11 @@ export class CatalogueComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
   openDialog(){
-    this.dialogRef.open(AddreviewComponent)
+    this.dialogRef.open(AddreviewComponent, {
+    panelClass: 'dialog-container-custom' 
+    });
   }
   
   setId(id: number) {
