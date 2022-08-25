@@ -21,7 +21,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AddreviewComponent } from './Components/addreview/addreview.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ReviewComponent } from './Components/review/review.component';
-import { DeletereviewComponent } from './Components/deletereview/deletereview.component';
 import { PostService } from './Components/post.service';
 import { NgxWebstorageModule } from 'ngx-webstorage';
 
@@ -38,7 +37,6 @@ import { NgxWebstorageModule } from 'ngx-webstorage';
     TestComponent,
     AddreviewComponent,
     ReviewComponent,
-    DeletereviewComponent
   ],
   imports: [
     BrowserModule,

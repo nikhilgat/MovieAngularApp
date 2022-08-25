@@ -4,8 +4,9 @@ import { CatalogueComponent } from '../catalogue/catalogue.component';
 import { HttpClient } from '@angular/common/http';
 import { PostService } from '../post.service';
 import { PostPayload } from '../PostPayload';
-import { DeletereviewComponent } from '../deletereview/deletereview.component';
 import { MatDialog } from '@angular/material/dialog';
+import { LocalStorageService } from 'ngx-webstorage';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -15,22 +16,33 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class ReviewComponent implements OnInit {
 
-  gotid:number=0;
   posts:any;
+  id: any;
 
-  constructor(private  postService:PostService, private dialogRef : MatDialog) { 
+  constructor(private  postService:PostService, private dialogRef : MatDialog, private http: HttpClient,private localStorage:LocalStorageService,private router:Router) { 
     this.postService.getPostByid().subscribe((res) => {
       this.posts = res;
     });
   }
 
-  deletepost(){
-    this.postService.deletePostByid();
+  ngOnInit(): void {
   }
-  deleteDialog(){
-    this.dialogRef.open(DeletereviewComponent)
+  setId(id: number) {
+    this.id = id;
+    this.localStorage.store('postId', this.id);
+    // this.router.navigateByUrl("/review");
   }
 
-  ngOnInit(): void {
+  deletepost(id: number){
+    this.id = id;
+    this.localStorage.store('deleteId', this.id);
+    let deleteId = this.localStorage.retrieve('deleteId');
+    this.localStorage.store('deleteId', this.id);
+    this.http.delete('http://localhost:8080/deleteposts/'+ deleteId).subscribe((res) => {
+      location.reload();
+    },(err) => {
+      location.reload();
+    });
+    this.router.navigateByUrl("/catalogue");
   }
 }

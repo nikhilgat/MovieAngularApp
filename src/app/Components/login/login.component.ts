@@ -44,9 +44,8 @@ export class LoginComponent implements OnInit {
     this.http.put('http://localhost:8080/updateusers', this.editUser).subscribe(
       (res) => {
         alert('Registered Successfully');
-        location.reload;
         this.registerForm.reset();
-        this.router.navigate(['home']);
+        // this.router.navigate(['home']);
         console.log(this.editUser);
       },
     );

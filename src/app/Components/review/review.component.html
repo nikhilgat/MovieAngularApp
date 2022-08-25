@@ -1,24 +1,12 @@
-<script>
-    window.onbeforeunload = function () {
-        window.scrollTo(0, 0);
-        }
-</script>
 <div class="bkg">
-        <a class="delete">
-        <button mat-button (click)="deleteDialog()" style="color: white;font-family: 'Jost', sans-serif;">Delete</button>
-    </a>
-    
-    <h1 class="title">
-        {{posts.title}}
-    </h1>
-    <!-- <h3 class="description">
-        {{posts.description}}
-    </h3> -->
-    <div>
-        <img class="image" mat-card-image src="{{posts.imageUrl}}">
-    </div>
-    <h3 class="review">
-        {{posts.review}}
-    </h3>
-    <button class="btn" (click)="deletepost()">delete</button>
+        <h1 class="title">
+            {{posts.title}}
+        </h1>
+        <div>
+            <img class="image" mat-card-image src="{{posts.imageUrl}}">
+        </div>
+        <h3 class="review">
+            {{posts.review}}
+        </h3>
+        <button class="btn" (click)="deletepost(posts.id)">delete</button>
 </div>

@@ -31,7 +31,7 @@ export class AddreviewComponent implements OnInit {
       this.http.post('http://localhost:8080/postposts', this.editpost).subscribe(
         (res) => {
           alert('Posted Successfully');
-          location.reload;
+          location.reload();
           console.log(this.editpost);
           this.router.navigate(['catalogue']);
 

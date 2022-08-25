@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
+import { MatCard } from '@angular/material/card';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { AddreviewComponent } from '../addreview/addreview.component';
-import { DeletereviewComponent } from '../deletereview/deletereview.component';
 import { LocalStorageService } from 'ngx-webstorage';
 import { PostPayload } from '../PostPayload';
 import { TestComponent } from '../test/test.component';
@@ -36,13 +36,11 @@ export class CatalogueComponent implements OnInit {
   openDialog(){
     this.dialogRef.open(AddreviewComponent)
   }
-  deleteDialog(){
-    this.dialogRef.open(DeletereviewComponent)
-  }
-
+  
   setId(id: number) {
     this.id = id;
     this.localStorage.store('postId', this.id);
     this.router.navigateByUrl("/review");
   }
+
 }
