@@ -2,7 +2,8 @@
 
 
 .bkg
-{   min-height: 150%;
+{   
+    // min-height:;
     min-width: 100%;
     background: linear-gradient(to bottom, #212121, #4fb783, #212121);
 }
@@ -23,7 +24,7 @@
     position: relative;
     top: 200px;
     left: 5%;
-    max-width: 700px;
+    max-width: 90%;
     max-block-size: 10%;
     text-align: left;
 }
@@ -42,24 +43,13 @@
 .btn 
 {
     position: absolute;
-    top: 650px;
-    left: 75%;
-    text-decoration: none;
-    color: #1cc49d;
-    background-color: #1b2f31;
-    border-radius: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 3em;
-    width: 8em;
-    font-size: large;
-    font-weight: 600;
+    top: 14px;
+    right: 30px;
+    font-size: small;
+  }
+  button:hover {
+    background: #4fb783;
+    transition: .3s ease-in;
+  
   }
 
-  .delete {
-    position: absolute;
-    top: -2px;
-    right: 110px;
-    margin: 15px;
-  }

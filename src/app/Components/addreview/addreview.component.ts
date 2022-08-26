@@ -30,7 +30,7 @@ export class AddreviewComponent implements OnInit {
       this.editpost.title.length>0 && this.editpost.title.length<25 
       && this.editpost.description.length>0 && this.editpost.description.length<250 
       && this.editpost.imageUrl.length>0 
-      && this.editpost.review.length>0 && this.editpost.review.length<1000
+      && this.editpost.review.length>0
 
       )
     {

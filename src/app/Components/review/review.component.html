@@ -1,14 +1,15 @@
+
 <div class="bkg">
-        <h1 class="title">
+     <h1 class="title">
             {{posts.title}}
-        </h1>
-        <div>
+    </h1>
+    <div>
             <img class="image" mat-card-image src="{{posts.imageUrl}}">
-        </div>
-        <h3 class="review">
+    </div>
+    <h3 class="review">
             <h1>REVIEW</h1>
             <br>
             {{posts.review}}
-        </h3>
-        <button class="btn" (click)="deletepost(posts.id)">delete</button>
+     </h3>
+        <button class="btn" mat-button  style="color: white;font-family: 'Jost', sans-serif;" (click)="deletepost(posts.id)">Delete Review</button>
 </div>
