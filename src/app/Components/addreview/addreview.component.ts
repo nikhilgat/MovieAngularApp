@@ -1,9 +1,8 @@
-import { HttpClient } from '@angular/common/http';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import {PostPayload} from '../PostPayload';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { LoginService } from 'src/app/login.service';
 
 @Component({
   selector: 'app-addreview',
@@ -20,7 +19,7 @@ export class AddreviewComponent implements OnInit {
 
  editpost:PostPayload={id:"" ,title:"",description:"",review:"", imageUrl:""}
 
-  loadposts() {
+  getposts() {
     this.http.get('http://localhost:8080/getposts').subscribe((posts: any) => {
       this.posts = posts;
     });
@@ -34,14 +33,21 @@ export class AddreviewComponent implements OnInit {
 
       )
     {
-      this.http.post('http://localhost:8080/postposts', this.editpost).subscribe(
-        (res) => {
+      var token = LoginService.getToken()
+      console.log(token)
+      var header = {headers: new HttpHeaders().set('Authorization',  `Bearer ${token}`)
+      }
+      this.http.post('http://localhost:8080/postposts', this.editpost, header).subscribe(
+        (response) => {
           alert('Posted Successfully');
           location.reload();
           console.log(this.editpost);
           this.router.navigate(['catalogue']);
 
         },
+        Error =>{
+          console.log("Error occurred while adding a review");
+        }
       );
     }
   else{
