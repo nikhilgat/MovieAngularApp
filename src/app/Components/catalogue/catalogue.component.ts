@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { MatCard } from '@angular/material/card';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
@@ -8,6 +8,7 @@ import { PostPayload } from '../PostPayload';
 import { TestComponent } from '../test/test.component';
 import { Router } from '@angular/router';
 import { LocalStorage } from 'ngx-webstorage';
+import { LoginService } from 'src/app/login.service';
 
 
 @Component({
@@ -19,15 +20,32 @@ export class CatalogueComponent implements OnInit {
 
   id:any;
   constructor(private http: HttpClient, private dialogRef : MatDialog,private localStorage:LocalStorageService,private router:Router) {
-    this.loadposts();
+    this.getposts();
   }
   posts:any="";
 
 
-  loadposts() {
-    this.http.get('http://localhost:8080/getposts').subscribe((posts: any) => {
-      this.posts = posts;
-    });
+  // getposts() {
+  //   var token = this.localStorage.retrieve("token")
+  //   console.log(token)
+  //   this.http.get('http://localhost:8080/getposts').subscribe((posts: any) => {
+  //     this.posts = posts;
+  //   });
+  // }
+  
+  getposts(){
+    var token = LoginService.getToken()
+    console.log(token)
+    var header = {headers: new HttpHeaders().set('Authorization',  `Bearer ${token}`)
+    }
+    
+    this.http.get('http://localhost:8080/getposts', header).subscribe(
+      (Response:any)  => {
+        console.log(Response);
+          this.posts = Response;
+
+      }
+    )
   }
 
   ngOnInit(): void {
