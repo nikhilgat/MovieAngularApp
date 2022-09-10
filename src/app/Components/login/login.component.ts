@@ -3,6 +3,8 @@ import {FormControl, FormGroup, Validators, FormBuilder} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { LoginService } from 'src/app/login.service';
+
 
 @Component({
   selector: 'login',
@@ -14,8 +16,12 @@ export class LoginComponent implements OnInit {
   public loginForm! : FormGroup
   public registerForm! : FormGroup
 
-  constructor(private http: HttpClient, private formBuilder : FormBuilder, private router: Router) {
-    // this.loadUsers();
+  credentials = {
+    username : "",
+    password : ""
+  } 
+
+  constructor(private http: HttpClient, private formBuilder : FormBuilder, private router: Router, private loginService:LoginService) {
   }
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
@@ -33,19 +39,13 @@ export class LoginComponent implements OnInit {
 
  editUser:edit={id:0 ,name:"",email:"",password:""}
 
-  loadUsers() {
-    this.http.get('http://localhost:8080/getusers').subscribe((users: any) => {
-      this.users = users;
-    });
-  }
-  uploadUsers() {
+  register() {
   if(this.editUser.name.length>0 && this.editUser.email.length>0 && this.editUser.password.length>0)
     {
-    this.http.put('http://localhost:8080/updateusers', this.editUser).subscribe(
+    this.http.post('http://localhost:8080/saveusers', this.editUser).subscribe(
       (res) => {
         alert('Registered Successfully');
         this.registerForm.reset();
-        // this.router.navigate(['home']);
         console.log(this.editUser);
       },
     );
@@ -55,6 +55,28 @@ export class LoginComponent implements OnInit {
         alert('Error has occured please enter valid details');
           }
       }
+
+      login()
+  {
+    if((this.credentials.username!="" && this.credentials.password!="") || (this.credentials.username!=null && this.credentials.password!=null)){
+      console.log("form is submitted");
+      console.log(this.credentials.username);
+      console.log(this.credentials.password);
+      this.loginService.generateToken(this.credentials).subscribe(
+        (Response:any)  => {
+          console.log(Response);
+          this.loginService.loginUser(Response.token);
+          window.location.href="/catalogue";
+        },
+        Error =>{
+          console.log(Error);
+        }
+      )
+    }
+    else{
+      console.log("values are invalid");
+    }
+  }
   }
 
 export interface edit{

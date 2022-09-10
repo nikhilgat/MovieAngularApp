@@ -24,23 +24,23 @@
 					<div style="text-align: center;">
 						<span class="text-danger" *ngIf="registerForm.controls['registerPassword'].dirty && registerForm.hasError('required','registerPassword')">*Please enter the Password</span>
 						</div>
-					<button (click)="uploadUsers()">Sign up</button>
+					<button (click)="register()">Sign up</button>
 					</form>
 				</div>
 			</div>
 			<div class="login">
 				<div>
-					<form [formGroup]="loginForm">
+					<form class="form" (ngSubmit)="login()" >
 					<label for="chk" aria-hidden="true">Login</label>
-					<input type="email" formControlName="loginEmail" placeholder="Email">
+					<input type="text" [(ngModel)]="credentials.username" placeholder="Username" name="user">
 					<div style="text-align: center;">
 					<span class="text-danger" *ngIf="loginForm.controls['loginEmail'].dirty && loginForm.hasError('required','loginEmail')">*Please enter the Email</span>
 					</div>
-					<input type="password" formControlName="loginPassword" placeholder="Password">
+					<input type="password" [(ngModel)]="credentials.password" placeholder="Password" name="password">
 					<div style="text-align: center;">
 					<span class="text-danger" *ngIf="loginForm.controls['loginPassword'].dirty && loginForm.hasError('required','loginPassword')">*Please enter the password</span>
 					</div>
-					<button type="submit" [disabled]="!loginForm.valid">Login</button>
+					<button value="submit">Login</button>
 					</form>
 				</div>
 			</div>
