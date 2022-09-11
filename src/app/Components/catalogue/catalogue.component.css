@@ -113,7 +113,7 @@ button:hover {
 .review {
   position: absolute;
   top: -2px;
-  right: -1px;
+  right: 80px;
   margin: 15px;
 }
 
@@ -141,4 +141,10 @@ button:hover {
 }
 .dialog-container-custom .mat-dialog-container {
   background-color: #4fb783;
+}
+.logout {
+  position: absolute;
+  top: -2px;
+  right: -1px;
+  margin: 15px;
 }

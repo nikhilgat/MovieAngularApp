@@ -48,5 +48,10 @@ export class CatalogueComponent implements OnInit {
     this.localStorage.store('postId', this.id);
     this.router.navigateByUrl("/review");
   }
+  logout()
+  {
+    sessionStorage.removeItem('token');
+    return true;
+  }
 
 }
