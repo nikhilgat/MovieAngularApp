@@ -3,16 +3,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
     <div class="title">Add Review</div>
     <div class="input-container ic1">
-      <input  class="input" [(ngModel)]="editpost.title" type="text" placeholder="Title (0-20 Characters Only)"style="font-size: 13px" />
+      <input  class="input" [(ngModel)]="editpost.title" type="text" placeholder="Title"style="font-size: 15px" />
     </div>
     <div class="input-container ic2">
-      <input  class="input" [(ngModel)]="editpost.description" type="text" placeholder="Description (0-250 Characters Only)"style="font-size: 13px" />
+      <input  class="input" [(ngModel)]="editpost.description" type="text" placeholder="Description"style="font-size: 15px" />
     </div>
     <div class="input-container ic2">
-      <input  class="input" [(ngModel)]="editpost.imageUrl" type="text" placeholder="Image-Url" style="font-size: 13px"/>
+      <input  class="input" [(ngModel)]="editpost.imageUrl" type="text" placeholder="Image-Url" style="font-size: 15px"/>
     </div>
     <div class="input-box ic3">
-      <textarea  class="input" [(ngModel)]="editpost.review" type="text" placeholder="Review (0-1000 Characters Only)" style="font-size: 13px
+      <textarea  class="input" [(ngModel)]="editpost.review" type="text" placeholder="Review" style="font-size: 15px
       ;"></textarea> 
     </div>
     <button type="text" class="submit" (click)="uploadposts()">submit</button>

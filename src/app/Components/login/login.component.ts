@@ -46,7 +46,7 @@ export class LoginComponent implements OnInit {
       (res) => {
         alert('Registered Successfully');
         this.registerForm.reset();
-        console.log(this.editUser);
+        // console.log(this.editUser);
       },
     );
     }
@@ -60,8 +60,7 @@ export class LoginComponent implements OnInit {
   {
     if((this.credentials.username!="" && this.credentials.password!="") || (this.credentials.username!=null && this.credentials.password!=null)){
       console.log("form is submitted");
-      console.log(this.credentials.username);
-      console.log(this.credentials.password);
+
       this.loginService.generateToken(this.credentials).subscribe(
         (Response:any)  => {
           console.log(Response);
